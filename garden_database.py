@@ -34,6 +34,7 @@ df['Harvest Weeks'] = df['Harvest Weeks']/np.timedelta64(1, 'W')
 df['Harvest Weeks'] = df['Harvest Weeks'].astype(int)
 
 # CREATING GANTT CHART PLOTS
+# IDEA FROM VRENI - MAKE DASHES EQUAL TO A WEEK LENGTH
 fig, ax = plt.subplots(figsize = (12, 4))
 ax.vlines(df['Last Frost'], -1, (len(df['Last Frost'])+1), \
     color = 'c', linestyles = 'dashed', linewidth = 2)
